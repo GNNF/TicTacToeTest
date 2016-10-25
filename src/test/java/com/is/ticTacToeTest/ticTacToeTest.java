@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class WorldTest {
+public class ticTacToeTest {
 
     @Test
     public void greetResultsInHello() {
