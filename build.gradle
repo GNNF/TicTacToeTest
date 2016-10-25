@@ -12,7 +12,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassname = "com.is.ticTacToe.tictactoe"
+mainClassName = "com.is.ticTacToe.tictactoe"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -25,11 +25,20 @@ repositories {
 dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'net.joningi:icndb-java-api:1.0'
+   
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-core:1.3'
 }
 */
+
+jar {
+	manifest {
+		attributes("Main-Class": "com.is.ticTacToe.tictactoe")
+	}
+}
